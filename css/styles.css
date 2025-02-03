@@ -1,0 +1,208 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #000000; /* Fundo preto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adiciona as estrelas no fundo */
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Para que as estrelas não interfiram no conteúdo */
+    z-index: -1; /* Coloca as estrelas abaixo do conteúdo */
+}
+
+/* Estilo de cada estrela */
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite ease-in-out;
+    opacity: 0.8;
+}
+
+/* Animação de piscada das estrelas */
+@keyframes twinkle {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+}
+
+/* Estilo do Planeta Terra */
+.earth {
+    position: absolute;
+    left: 5%; /* Lado esquerdo da tela */
+    top: 10%; /* Um pouco abaixo do topo */
+    width: 60px;  /* 2x menor que o Saturno (120px) */
+    height: 60px; /* 2x menor que o Saturno (120px) */
+    background-color: #2a72d1; /* Cor azul da Terra */
+    border-radius: 50%; /* Torna a div redonda */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* Brilho ao redor */
+    z-index: 10; /* Fica acima das estrelas */
+}
+
+/* Estilo da Lua */
+.moon {
+    position: absolute;
+    left: 13%; /* 2x menor que a Terra, um pouco à direita da Terra */
+    top: 20%; /* Alinhamento diagonal em relação à Terra */
+    width: 30px; /* 2x menor que a Terra */
+    height: 30px; /* 2x menor que a Terra */
+    background-color: #d1d1d1; /* Cor da Lua */
+    border-radius: 50%; /* Torna a div redonda */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* Brilho ao redor */
+    z-index: 9; /* Fica abaixo da Terra */
+}
+
+/* Estilo de Saturno */
+.saturn {
+    position: absolute;
+    right: 5%; /* Lado direito da tela */
+    top: 20%; /* Um pouco abaixo do topo */
+    width: 120px; /* 4x maior que o satélite */
+    height: 120px;
+    background-color: #ad9019;
+    border-radius: 50%; /* Torna a div redonda */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Brilho ao redor */
+    z-index: 5; /* Fica abaixo do satélite */
+}
+
+/* Estilo para a estrela cadente */
+.shooting-star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.9;
+    animation: shootingStarAnimation 4s linear infinite;
+    box-shadow: 0 0 15px 5px rgba(173, 216, 230, 0.7); /* Rastro azul claro */
+}
+
+/* Animação da estrela cadente */
+@keyframes shootingStarAnimation {
+    0% {
+        top: -10%;
+        left: 100%;
+        opacity: 1;
+        box-shadow: 0 0 15px 5px rgba(173, 216, 230, 0.7); /* Rastro no início */
+    }
+    100% {
+        top: 110%;
+        left: -10%;
+        opacity: 0;
+        box-shadow: 0 0 15px 5px rgba(173, 216, 230, 0); /* Rastro desaparecendo */
+    }
+}
+
+/* Anéis de Saturno */
+.rings {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px; /* Largura dos anéis */
+    height: 50px; /* Altura dos anéis */
+    background-color: rgba(255, 255, 255, 0.5); /* Cor translúcida para os anéis */
+    border-radius: 50%; /* Torna os anéis redondos */
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+/* Estilo do container e do conteúdo */
+.container {
+    background: #ffffff; /* Cinza metálico com leve toque de azul */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 420px;
+    width: 100%;
+    border: 4px solid #154acf; /* Borda roxa */
+}
+
+/* Estilos para o avatar, título e links */
+.profile .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+p {
+    color: #555;
+    font-size: 14px;
+}
+
+.links {
+    margin-top: 20px;
+}
+
+.links h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.link {
+    display: block;
+    text-decoration: none;
+    background: #0073b1;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.link:hover {
+    background: #005582;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade para dispositivos pequenos */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        max-width: 90%;
+        border: none;
+    }
+
+    .profile h1 {
+        font-size: 20px;
+    }
+
+    .link {
+        padding: 8px;
+    }
+}
