@@ -1,0 +1,36 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text: #ffffff;
+  --text-main: #ffcc00;
+
+  --ff-base: "Ubuntu", sans-serif;
+  --ff-title: "Raleway", sans-serif;
+
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-title: 1.5625rem;
+  --text-lg: 2rem;
+  --text-xl: 4rem;
+
+  --background: #0b0f1f;
+
+  --my-cv: #ffcc00;
+
+  --bay-line: #ffcc00;
+
+}
+
+html {
+  font: 500 1rem/1.5rem var(--ff-title);
+  color: var(--text);
+  background-color: var(--background);
+}
+
+body {
+  padding-top: 100px;
+}

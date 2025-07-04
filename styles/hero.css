@@ -1,0 +1,84 @@
+section.hero {
+  max-width: 80rem;
+  width: 100%;
+  padding: 5.5rem 2rem;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap; 
+}
+
+.hero-content .text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-content .social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.hero-content .social-links .icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-content .social-links .icons a {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.btn-cv {
+  padding: 0.8rem 3rem;
+  background-color: transparent;
+  color: var(--my-cv);
+  font-weight: 600;
+  font-size: var(--text-base);
+  border: 2px solid var(--my-cv);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-cv:hover {
+  background-color: var(--my-cv);
+  color: var(--text);
+}
+
+.hero-content .my-picture {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-content .my-picture img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content .my-picture::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--text-main);
+  border-radius: 15px;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+section.hero strong {
+  color: var(--text-main);
+}
