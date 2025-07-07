@@ -9,7 +9,7 @@ section.hero {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .hero-content .text {
@@ -25,12 +25,12 @@ section.hero {
   margin-top: 1rem;
 }
 
-.hero-content .social-links .icons {
+.hero-content .icons {
   display: flex;
   gap: 1rem;
 }
 
-.hero-content .social-links .icons a {
+.hero-content .icons a {
   width: 2.5rem;
   height: 2.5rem;
 }
@@ -81,4 +81,21 @@ section.hero {
 
 section.hero strong {
   color: var(--text-main);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-content .social-links {
+    align-items: center;
+  }
+
+  .hero-content .text {
+    text-align: center;
+  }
 }

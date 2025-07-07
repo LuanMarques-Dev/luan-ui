@@ -26,3 +26,9 @@ section.about {
   color: var(--text);
 }
 
+/* Responsivo opcional */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 0 1rem;
+  }
+}
