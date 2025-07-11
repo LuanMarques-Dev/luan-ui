@@ -9,15 +9,13 @@
   <title>Luan Marques</title>
 
   <link rel="stylesheet" href="styles/index.css">
-
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <nav class="title">
-    <a href="#sobre">Sobre</a>
-    <a href="#">Formação</a>
-    <a href="#">Projetos</a>
-    <a href="#">Cursos</a>
+    <a href="#about">Sobre</a>
+    <a href="#education">Formação</a>
+    <a href="#projects">Projetos</a>
   </nav>
 
   <section class="hero">
@@ -35,15 +33,13 @@
             <a href="https://github.com/LuanMarques-Dev" title="github">
               <img src="assets/icons/github.svg" alt="github" />
             </a>
-            <a href="https://www.linkedin.com/in/     luan-marques-pereira-125852205/" title="linkedin">
+            <a href="https://www.linkedin.com/in/luan-marques-pereira-125852205/" title="linkedin">
               <img src="assets/icons/linkedin.svg" alt="linkedin" />
             </a>
           </div>
 
           <button class="btn-cv" id="btn-cv">CV</button>
         </div>
-
-
       </div>
 
       <div class="my-picture">
@@ -54,7 +50,7 @@
 
   <div class="divider" role="separator" aria-hidden="true"></div>
 
-  <section class="about" id="sobre">
+  <section class="about" id="about">
     <div class="about-content">
       <h2>Sobre Mim</h2>
       <p>
@@ -63,14 +59,121 @@
       <p>
         Descobrir que é possível tirar uma ideia do papel e transformá-la em algo real com programação foi o que me fez me apaixonar de vez por essa área.
       </p>
-
-      <br/>
-      <br/>
-      <h2>PORTFÓLIO EM CONSTRUÇÃO</h2>
     </div>
   </section>
 
+  <div class="divider" role="separator" aria-hidden="true"></div>
+
+  <section class="education" id="education">
+  <h2 class="education-title">Formação</h2>
+  
+  <div class="education-content">
+    <div class="education-image">
+      <img src="assets/img/tech.png" alt="Formação Acadêmica" />
+    </div>
+
+    <div class="education-card">
+      <span class="year">2022 - 2024</span>
+      <div class="card-body">
+        <div class="icon">
+          <img src="assets/icons/education.png" alt="Ícone Educação">
+        </div>
+        <div class="info">
+          <h3>Curso de Graduação Superior de Tecnologia em Análise e Desenvolvimento de Sistemas</h3>
+          <p>Faculdade Unopar</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" role="separator" aria-hidden="true"></div>
+
+<section class="projects" id="projects">
+  <h2 class="projects-title">Projetos</h2>
+
+  <div class="projects-content">
+    <a href="https://github.com/LuanMarques-Dev/luan-ui" target="_blank" style="text-decoration: none; color: inherit;">
+      <figure>
+        <img src="assets/img/img-projects/projects-01.png" alt="Projects 1" />
+        <figcaption>
+          <span>Desenvolvido com:</span>
+          <img src="assets/icons/languages/html.png" alt="HTML5" />
+          <img src="assets/icons/languages/css.png" alt="CSS3" />
+          <img src="assets/icons/languages/js.png" alt="JavaScript" />
+        </figcaption>
+      </figure>
+    </a>
+
+
+    <figure>
+      <img src="assets/img/img-projects/developing.png" alt="Developing" />
+      <figcaption>
+        <span>PROJETO EM DESENVOLVIMENTO</span>
+        <!--
+        <img src="assets/icons/languages/html.png" alt="HTML5" />
+        <img src="assets/icons/languages/css.png" alt="CSS3" />
+        <img src="assets/icons/languages/js.png" alt="JavaScript" />
+      </figcaption>
+      -->
+    </figure>
+
+    <figure>
+      <img src="assets/img/img-projects/developing.png" alt="Developing" />
+      <figcaption>
+        <span>PROJETO EM DESENVOLVIMENTO</span>
+        <!--
+        <img src="assets/icons/languages/html.png" alt="HTML5" />
+        <img src="assets/icons/languages/css.png" alt="CSS3" />
+        <img src="assets/icons/languages/js.png" alt="JavaScript" />
+      </figcaption>
+      -->
+    </figure>
+
+    <figure>
+      <img src="assets/img/img-projects/developing.png" alt="Developing" />
+      <figcaption>
+        <span>PROJETO EM DESENVOLVIMENTO</span>
+        <!--
+        <img src="assets/icons/languages/html.png" alt="HTML5" />
+        <img src="assets/icons/languages/css.png" alt="CSS3" />
+        <img src="assets/icons/languages/js.png" alt="JavaScript" />
+        -->
+      </figcaption>
+    </figure>
+
+    <figure>
+      <img src="assets/img/img-projects/developing.png" alt="Developing" />
+      <figcaption>
+        <span>PROJETO EM DESENVOLVIMENTO</span>
+        <!--
+        <img src="assets/icons/languages/html.png" alt="HTML5" />
+        <img src="assets/icons/languages/css.png" alt="CSS3" />
+        <img src="assets/icons/languages/js.png" alt="JavaScript" />
+      </figcaption>
+      -->
+    </figure>
+
+    <figure>
+      <img src="assets/img/img-projects/developing.png" alt="Developing" />
+      <figcaption>
+        <span>PROJETO EM DESENVOLVIMENTO</span>
+        <!--
+        <img src="assets/icons/languages/html.png" alt="HTML5" />
+        <img src="assets/icons/languages/css.png" alt="CSS3" />
+        <img src="assets/icons/languages/js.png" alt="JavaScript" />
+        -->
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
 
   <script src="scripts/nav.js"></script>
+  <script>
+    document.getElementById("btn-cv").addEventListener("click", function () {
+      window.open("assets/cv/Luan-Marques.pdf", "_blank");
+    });
+  </script>
 </body>
 </html>

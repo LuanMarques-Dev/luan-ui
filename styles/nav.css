@@ -57,3 +57,15 @@ nav {
     flex-wrap: wrap;
   }
 }
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+
+  .title a {
+    padding: 0.3rem 0;
+  }
+}
+

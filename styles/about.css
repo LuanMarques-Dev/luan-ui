@@ -5,6 +5,7 @@ section.about {
   margin-top: 2rem;
   background-color: #0d1326;
   border-radius: 12px;
+  margin: 0 auto;
 }
 
 .about-content {
@@ -32,3 +33,19 @@ section.about {
     padding: 0 1rem;
   }
 }
+
+@media (max-width: 480px) {
+  .about-content {
+    padding: 0 0.5rem;
+  }
+
+  .about-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+    line-height: 1.6rem;
+  }
+}
+

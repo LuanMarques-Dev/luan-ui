@@ -2,6 +2,7 @@ section.hero {
   max-width: 80rem;
   width: 100%;
   padding: 5.5rem 2rem;
+  margin: 0 auto;
 }
 
 .hero-content {
@@ -83,19 +84,41 @@ section.hero strong {
   color: var(--text-main);
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
   .hero-content {
     flex-direction: column;
-    text-align: center;
     align-items: center;
+    text-align: center;
+  }
+
+  .hero-content .text {
+    width: 100%;
+    max-width: 500px;
   }
 
   .hero-content .social-links {
     align-items: center;
   }
 
-  .hero-content .text {
-    text-align: center;
+  .hero-content .icons {
+    justify-content: center;
   }
 }
+
+@media (max-width: 480px) {
+  .hero-content .my-picture img {
+    max-width: 140px;
+  }
+
+  .hero-content .text h1 {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+  }
+
+  .btn-cv {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
+
+
