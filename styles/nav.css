@@ -45,7 +45,6 @@ nav {
   transform: scaleX(1);
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
   nav {
     justify-content: center;
