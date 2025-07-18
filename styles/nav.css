@@ -1,24 +1,39 @@
+/* NAV GERAL */
 nav {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   z-index: 1000;
   background-color: var(--background);
   padding: 1rem 2rem;
-  display: flex;
-  justify-content: flex-end;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.title {
+/* CONTAINER CENTRALIZADOR */
+nav .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  font-size: var(--text-title);
+  flex-direction: column;      /* empilha links e bandeiras */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.title a {
+/* LINKS DO MENU */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: var(--text-title);
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
   color: var(--text);
   text-decoration: none;
   width: fit-content;
@@ -26,7 +41,7 @@ nav {
   padding-bottom: 4px;
 }
 
-.title a::after {
+.nav-links a::after {
   content: "";
   width: 100%;
   height: 2px;
@@ -39,32 +54,85 @@ nav {
   transition: transform 200ms linear;
 }
 
-.title a:hover::after,
-.title a.active::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
   opacity: 1;
   transform: scaleX(1);
 }
 
+/* BANDEIRAS - LANGUAGE SWITCHER DESTACADA */
+.language-switcher {
+  margin-top: 0.75rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;              /* pill */
+  backdrop-filter: blur(4px);        /* leve efeito vidro */
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.language-switcher .flag {
+  width: clamp(24px, 2.5vw, 32px);
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
+  filter: grayscale(40%) brightness(0.9);
+}
+
+.language-switcher .flag:hover {
+  transform: scale(1.1);
+  filter: none;
+}
+
+.language-switcher .flag.selected {
+  filter: none;
+  box-shadow: 0 0 0 2px var(--bay-line), 0 0 6px rgba(255, 204, 0, 0.6);
+  border-radius: 50%;
+}
+
+/* ===================== RESPONSIVO ===================== */
+
+/* <= 768px (tablets / celulares maiores) */
 @media (max-width: 768px) {
-  nav {
-    justify-content: center;
-    padding: 1rem;
+  .nav-links {
+    gap: 1rem;
+    font-size: var(--text-title);
   }
 
-  .title {
-    justify-content: center;
-    flex-wrap: wrap;
+  .language-switcher {
+    margin-top: 3rem;              /* mais espaço abaixo do menu */
+    gap: 0.5rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .language-switcher .flag {
+    width: 28px;
   }
 }
 
+/* <= 480px (celulares pequenos) */
 @media (max-width: 480px) {
-  .title {
-    font-size: 1rem;
+  .nav-links {
+    flex-direction: column;
     gap: 0.5rem;
+    font-size: var(--text-title);
   }
 
-  .title a {
+  .nav-links a {
     padding: 0.3rem 0;
   }
-}
 
+  .language-switcher {
+    margin-top: 0.75rem;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+  }
+
+  .language-switcher .flag {
+    width: 32px; /* um pouco maior p/ facilitar o toque */
+  }
+}

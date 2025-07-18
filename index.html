@@ -12,11 +12,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  
   <nav class="title">
-    <a href="#about">Sobre</a>
-    <a href="#education">Formação</a>
-    <a href="#projects">Projetos</a>
+    <div class="container">
+    <div class="nav-links">
+        <a href="#about">Sobre</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#education">Formação</a>
+        <a href="#projects">Projetos</a>
+      </div>
+
+      <div class="language-switcher">
+        <img src="assets/icons/flags/brasil.png" alt="Português" data-lang="pt-BR" class="flag selected" />
+        <img src="assets/icons/flags/usa.png" alt="English" data-lang="en-US" class="flag" />
+        <img src="assets/icons/flags/japan.png" alt="日本語" data-lang="ja-JP" class="flag" />
+      </div>
+   </div>
   </nav>
+
+
+
 
   <section class="hero">
     <div class="hero-content">
@@ -64,6 +79,19 @@
 
   <div class="divider" role="separator" aria-hidden="true"></div>
 
+  <section class="skills" id="skills">
+    <h2 class="skills-title">Habilidades</h2>
+
+    <div class="skills-content">
+      <img src="assets/icons/languages/html.png" alt="HTML5" title="HTML5" />
+      <img src="assets/icons/languages/css.png" alt="CSS3" title="CSS3" />
+      <img src="assets/icons/languages/js.png" alt="JavaScript" title="JavaScript" />
+      <img src="assets/icons/languages/github.svg" alt="GitHub" title="GitHub" />
+    </div>
+  </section>
+
+  <div class="divider" role="separator" aria-hidden="true"></div>
+
   <section class="education" id="education">
   <h2 class="education-title">Formação</h2>
   
@@ -80,7 +108,7 @@
         </div>
         <div class="info">
           <h3>Curso de Graduação Superior de Tecnologia em Análise e Desenvolvimento de Sistemas</h3>
-          <p>Faculdade Unopar</p>
+          <p>Faculdade Anhanguera</p>
         </div>
       </div>
     </div>
@@ -174,5 +202,9 @@
       window.open("assets/cv/Luan-Marques.pdf", "_blank");
     });
   </script>
+
+  <script src="scripts/lang.js"></script>
+  <script src="scripts/lang-switcher.js"></script>
+
 </body>
 </html>

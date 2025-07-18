@@ -1,0 +1,31 @@
+.skills {
+  padding: 4rem 1rem;
+  background-color: #121212;
+  color: white;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ffd700;
+}
+
+.skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.skills-content img {
+  width: 64px;
+  height: 64px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.skills-content img:hover {
+  transform: scale(1.1);
+  filter: none;
+}
