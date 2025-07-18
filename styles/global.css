@@ -54,7 +54,7 @@ body {
 
 .language-switcher .flag.selected {
   opacity: 1;
-  border: 2px solid #ffcc00; /* Usei a cor do seu tema */
+  border: 2px solid #ffcc00;
   border-radius: 50%;
 }
 
